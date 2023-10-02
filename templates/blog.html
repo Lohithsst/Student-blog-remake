@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SST Student Blog</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="/static/script.js"></script>
+</head>
+
+<body>
+  <div class = "navbar">
+    <div class = "navsections"> 
+      <div style="display: flex; flex-direction: column;">
+        <button id = "Aboutbutton" onclick="opennav('Abouttext')" class="navbuttons">
+            <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+            <div class="buttons"> About </div>
+        </button>
+        <div id="Abouttext" class="overlay-text">
+          <div style="display: flex; flex-direction: column;">
+            <div style="font-size: 1.5rem; color: red;">Vision</div>
+            A globally connected institution dedicated to transforming learning
+          </div>
+        </div>
+      </div>
+    
+      <div style="display: flex; flex-direction: column;">
+        <button id = "Resourcesbutton" onclick="opennav('Resourcestext')" class="navbuttons">
+            <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+            <div class="buttons"> Resources </div>
+        </button>
+        <div id="Resourcestext" class="overlay-text">
+            <p>Hello 2</p>
+        </div>
+      </div>
+  
+      <div style="display: flex; flex-direction: column;">
+        <button id = "Housesbutton" onclick="opennav('Housestext')" class="navbuttons">
+            <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+            <div class="buttons"> Houses </div>
+        </button>
+        <div id="Housestext" class="overlay-text">
+          Black House <br>
+          Blue House <br>
+          Green House <br>
+          Red House <br>
+          Yellow House
+          </div>
+      </div>
+    
+    </div>
+
+    <div class = "logo">
+      <img style="height: 80%;" src="/static/SSTLogo.png" alt="SSTLogo">
+      <div style="font-size: 2rem; margin: 1rem; font-weight: 900;"> Student Blog</div>
+    </div>
+
+    <div class = "navsections">
+      <div class="navbuttons">
+        <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+        <div class="buttons"> Programmes </div>
+      </div>
+
+      <div class="navbuttons">
+        <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+        <div class="buttons"> Services </div>
+      </div>
+
+      <div class="navbuttons">
+        <img style="height: 1rem;" src="/static/downarrow.svg" alt="">
+        <div class="buttons"> Support </div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "mainbody">
+    {% for post in posts %}
+      <div class = "post">
+        <div style="margin-bottom: 5rem;">
+          <div style="font-size: 2.5rem;">{{ post.header }}</div>
+          <div>{{ post.details | safe }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+
+</html>

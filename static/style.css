@@ -1,0 +1,70 @@
+body{
+    background-color: #DEF0FA; 
+    background-size: cover; margin: 0%;
+}
+
+.logo{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    height: 100%;
+}
+
+.navbar{
+    background-color: #DEDFF9; 
+    width: 100vw;
+    height: 8vh; 
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mainbody{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 2rem;
+    flex-direction: column;
+}
+
+.post{
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 60%;
+}
+
+.navbuttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #DEDFF9;
+    gap: 0.5rem;
+    position: relative;
+    border: 0rem;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navsections{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 30%;
+}
+
+.overlay-text {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    margin-top: 2rem;
+    background-color: #DEDFF9;
+    max-width: 30%;
+    word-wrap: break-word;
+    flex-direction: column;
+}
